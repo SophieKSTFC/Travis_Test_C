@@ -13,8 +13,10 @@ matrix:
           - clang-tidy-4.0
           - gcc-6
           - g++-6
-        
+
+    compiler: g++
     script:
+      - make even_digits
       - clang-tidy even_digits.cpp
 
   - os: osx
