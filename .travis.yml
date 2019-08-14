@@ -4,3 +4,4 @@ compiler: g++
 
 script: 
   - make even_digits
+  - ./even_digits
