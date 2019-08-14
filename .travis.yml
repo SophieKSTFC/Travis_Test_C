@@ -18,7 +18,7 @@ matrix:
     compiler: g++
     script:
       - make even_digits
-      - clang-tidy -checks=-*,clang-analyzer-*,-clang-analyzer-cplusplus* src/even_digits.cpp -- 
+      - clang-tidy src/even_digits.cpp -- 
 
   - os: osx
     compiler: g++
