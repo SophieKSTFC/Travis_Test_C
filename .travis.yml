@@ -3,5 +3,5 @@ language: cpp
 compiler: g++
 
 script: 
-  - make even_digits
-  - ./even_digits
+  - make
+  - ./travis_make_gcc_cpp11
