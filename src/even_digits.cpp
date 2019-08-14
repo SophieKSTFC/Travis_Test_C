@@ -30,7 +30,7 @@ int find_even_number(int num){
 
     for(index = 0; index <=num; ++index){
         
-        int up_num = num + index
+        int up_num = num + index;
         int down_num = num - index;
 
         if(process_number(up_num)){
