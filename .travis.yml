@@ -23,6 +23,7 @@ matrix:
   - os: osx
     compiler: g++
     script: 
-      - make test
+
+      - make test_even_digits
       - rm even_digits
       - make even_digits
