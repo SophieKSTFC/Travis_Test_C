@@ -2,7 +2,20 @@ language: cpp
 
 
 matrix:
-  include:
+  - os: linux
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-4.0
+        packages:
+          - clang-4.0
+          - clang-tidy-4.0
+          - gcc-6
+          - g++-6
+        
+    script:
+      - clang-tidy even_digits.cpp
 
   - os: osx
     compiler: g++
