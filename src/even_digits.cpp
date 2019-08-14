@@ -5,12 +5,12 @@
 
 //#include "even_digits.h"
 
-int is_even(char c_num){
+int is_even(char c_num) {
     int num = c_num - '0';
     return (num % 2 == 0 ? 1 : 0);
 }
 
-bool process_number(int num){
+bool process_number(int num) {
 
     std::string up_string = std::to_string(num);
     bool is_even_flag = true;
@@ -18,13 +18,11 @@ bool process_number(int num){
     for(int i = 0; i < up_string.length(); i++){
         is_even_flag = is_even_flag && is_even(up_string.at(i)); 
     }
-
     return is_even_flag;
-
 }
 
 
-int find_even_number(int num){
+int find_even_number(int num) {
 
     int index;
 
