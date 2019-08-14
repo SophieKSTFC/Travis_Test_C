@@ -25,5 +25,6 @@ matrix:
     script: 
 
       - make test_even_digits
+      - ./test_even_digits
       - rm even_digits
       - make even_digits
