@@ -24,6 +24,7 @@ matrix:
     compiler: g++
     script: 
 
+      - rm test_even_digits
       - make test_even_digits
       - ./test_even_digits
       - rm even_digits
