@@ -2,6 +2,9 @@ language: cpp
 
 compiler: g++
 
+os: osx
+
 script: 
-  - make
-  - ./travis_make_gcc_cpp11
+  - rm even_digits
+  - make even_digits
+  - ./even_digits
