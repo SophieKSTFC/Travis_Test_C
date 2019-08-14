@@ -2,4 +2,5 @@ language: cpp
 
 compiler: g++
 
-install: make even_digits
+install: 
+  - make even_digits
