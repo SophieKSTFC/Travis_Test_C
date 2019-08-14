@@ -5,5 +5,5 @@
 
 BOOST_AUTO_TEST_CASE(my_test){
 
-    BOOST_CHECK(1 + 1 == 2);
+    BOOST_CHECK(1 + 3 == 2);
 }
