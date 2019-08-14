@@ -2,6 +2,7 @@ language: cpp
 
 
 matrix:
+  include:
   - os: linux
     addons:
       apt:
