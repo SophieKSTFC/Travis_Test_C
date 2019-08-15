@@ -17,14 +17,14 @@ matrix:
 
     compiler: g++
     script:
-      - make even_digits
+      - make even_digits -std=c++11
 
   - os: osx
     compiler: g++
     script: 
 
       - rm test_even_digits
-      - make test_even_digits
+      - make test_even_digits -std=c++11
       - ./test_even_digits
       - rm even_digits
-      - make even_digits
+      - make even_digits -std=c++11
