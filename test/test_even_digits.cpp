@@ -4,7 +4,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include "../include/even_digit_calculator.hpp"
-
+/**
 BOOST_AUTO_TEST_SUITE(even_digits_test_suite);
 
 //EvenDigitCalculator calculator(5);
@@ -15,26 +15,27 @@ BOOST_AUTO_TEST_CASE(my_test){
 }
 
 BOOST_AUTO_TEST_SUITE_END();
+**/
+struct CalculatorFixture{
+  
+    CalculatorFixture(){
+        BOOST_TEST_MESSAGE( "setup fixture" );
+    };
+    
+    ~CalculatorFixture(){ 
+        BOOST_TEST_MESSAGE( "tear down fixture" );
+    };
 
-class CalculatorFixture{
-    public: 
-        CalculatorFixture() : calculator(5){
-            BOOST_TEST_MESSAGE( "setup fixture" );
-        };
-        
-        ~CalculatorFixture(){ 
-            BOOST_TEST_MESSAGE( "tear down fixture" );
-        };
-
-        EvenDigitCalculator calculator;
+    EvenDigitCalculator calculator;
 };
 
-BOOST_FIXTURE_TEST_SUITE(CalculatorUnitTests, CalculatorFixture);
+BOOST_FIXTURE_TEST_SUITE(CalculatorUnitTests, CalculatorFixture)
 
 BOOST_AUTO_TEST_CASE(GIVEN_even_char_WHEN_is_even_called_THEN_1_returned){
-
+   
+    CalculatorFixture fixture;
     char even_char = '4';
-    BOOST_CHECK(calculator.is_even(even_char) == 1);
+    BOOST_CHECK(fixture.calculator.is_even(even_char) == 1);
 
 }
 
@@ -45,4 +46,4 @@ BOOST_AUTO_TEST_CASE(GIVEN_odd_char_WHEN_is_even_called_THEN_0_returned){
 
 }
 
-BOOST_AUTO_TEST_SUITE_END();
+BOOST_AUTO_TEST_SUITE_END()

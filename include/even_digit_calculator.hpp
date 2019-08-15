@@ -4,7 +4,7 @@
 class EvenDigitCalculator{
 
     public:
-        EvenDigitCalculator(int current_number);
+        EvenDigitCalculator();
 
         int current_number;
 

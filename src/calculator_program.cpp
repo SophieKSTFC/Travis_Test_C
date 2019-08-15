@@ -3,7 +3,7 @@
 
 int main(){
 
-    EvenDigitCalculator calculator(5);
+    EvenDigitCalculator calculator;
 
     int test_cases, display_number;
     std::cout << "Welcome to the even digits calculator!" << std::endl;

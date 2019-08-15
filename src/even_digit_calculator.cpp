@@ -6,9 +6,7 @@
 #include "../include/even_digit_calculator.hpp"
 
 
-EvenDigitCalculator::EvenDigitCalculator(int current_number){
-    this->current_number = current_number;
-}
+EvenDigitCalculator::EvenDigitCalculator(){}
 
 int EvenDigitCalculator::is_even(char c_num) {
     int num = c_num - '0';
