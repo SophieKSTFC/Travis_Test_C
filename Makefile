@@ -13,7 +13,7 @@ test_even_digits: test/test_even_digits.cpp src/even_digit_calculator.cpp
 	-lboost_unit_test_framework
 
 style:
-	@for src in $(SOURCES) ; do \
+	@for src in src/ ; do \
 		echo "Formatting $$src..." ; \
 		clang-format -i "$(SRC_DIR)/$$src" ; \
 		clang-tidy -checks='-*,readability-identifier-naming' \
