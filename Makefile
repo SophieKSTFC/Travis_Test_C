@@ -1,5 +1,6 @@
 CC=g++
 SOURCES = src/
+
 even_digits: src/calculator_program.cpp src/even_digit_calculator.cpp 
 	$(CC) --std=c++11 -o even_digits src/calculator_program.cpp src/even_digit_calculator.cpp \
 	-I /Users/dbu19518/Develop/Travis_Test_C/include/ \
